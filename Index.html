@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karting</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <header class="bg-[#121215] h-[10vh] w-[100%] flex items-center justify-evenly px-[10px] overflow-hidden min-w-full gap-[10%]">
+        <div class="flex items-center w-[30%]">
+            <img src="./Icons/logo.png!w700wp" alt="" class="w-[70px] hidden md:flex justify-center items-center">
+            <p class="text-[#da4310] text-[20px] font-bold hidden md:flex">RacingWorld</p>
+            <label for="menu">
+                <img src="./Icons/menu.svg" alt="" class="w-[20px] md:hidden">
+            </label>
+        </div>
+        <div class="w-[80%] md:mr-[15%] flex items-center justify-center a">
+            <select name="Equipos" id="" class="border-[1px] rounded-[20px] bg-white/80 h-[40px] hidden md:flex r-[5px] w-[15%] truncate">
+                <option value="">Alpine</option>
+                <option value="">Aston Martin</option>
+                <option value="">Ferrari</option>
+                <option value="Haas">Haas</option>
+                <option value="">Kick Sauber</option>
+                <option value="">McLaren</option>
+                <option value="">Mercedes</option>
+                <option value="">RB</option>
+                <option value="">Red Bull</option>
+                <option value="">Williams</option>
+            </select>
+            <input type="text" placeholder="Buscar piloto o equipo" class="border-[1px] rounded-[20px] h-[40px] w-[60%] border-white bg-white/80" >
+        </div>
+        <div class="flex items-center gap-2">
+            <img src="./Icons/bell.svg" alt="" class="w-[30px] mt-[10px]">
+            <img src="./Icons/user.svg" alt="" class="w-[30px] mt-[10px]">
+            <img src="./Icons/cart-shopping-solid.svg" alt="" class="w-[30px] mt-[10px]">
+        </div>
+    </header>
+    <header class="bg-[#121215] h-auto w-[100%] items-center py-[10px] hidden sm:flex md:justify-center hidden md:flex md:flex-wrap ">
+        <ul class="flex gap-[5%] items-center text-[#da4310] font-bold">
+            <li>Noticias</li>
+            <li>Mundial</li>
+            <li>Cronicas</li>
+            <li>Shopping</li>
+            <li>Recutamienmto</li>
+        </ul>
+    </header>
+
+    <input type="checkbox" id="menu" class="hidden peer/menu">
+    <label for="menu" class="h-full w-full peer-checked/menu:bg-[rgba(0,0,0,0.5)] fixed top-0 left-0 hidden peer-checked/menu:block"></label>
+    <aside class="bg-[#121215] h-full fixed w-[60%] top-0 left-0 translate-x-[-100%] peer-checked/menu:translate-x-0 transition-transform duration-300 ease-in-out md:hidden">
+        <ul class="h-full flex flex-col gap-[5%] items-start text-[#da4310] font-bold p-[20px] top-0">
+            <li>Noticias <label for="menu"><p class="text-white flex justify-end mr-[10%]">X</p></label></li>
+            <li>Mundial</li>
+            <li>Cronicas</li>
+            <li>Shopping</li>
+            <li>Recutamienmto</li>
+        </ul>
+    </aside>
+
+    <main class="mx-auto py-[1%] h-auto bg-black/90">
+        <section class="md:flex md:grid-cols-2 md:gap-[10px] lg:gap-[5px]">
+            <p class="text-serif text-[20px] mx-[10px] lg:mx-[5px] lg:py-[10px] text-[#da4310] font-bold">News</p>
+            <section class="container w-[90%] flex flex-col md:flex-row md:flex-wrap lg:gap-[5px] gap-[10px] mx-auto items-center justify-center md:w-[70%] max-w-[1200px]">
+                <div class="w-[100%] md:w-[45%] flex flex-col items-center justify-center bg-white rounded-[20px]">
+                <img src="Images/haas-saudi-comp.avif" alt="" class="w-[100%] max-w-full object-cover rounded-t-[20px]">
+                <div class="flex flex-col w-[100%] h-auto ">
+                    <p class="text-serif text-[20px] mx-[10px] py-[20px] text-[#da4310] font-bold">Ocon admits Haas struggled with ‘quite a few things’ in Saudi Arabia while Bearman takes positives from first triple header</p>
+                </div>
+                </div>
+                <div class="w-[100%] md:w-[45%] flex flex-col items-center justify-center bg-white rounded-[20px]">
+                <img src="Images/GettyImages-2211028424.avif" alt="" class="w-[100%] max-w-full object-cover rounded-t-[20px]">
+                <div class="flex flex-col w-[100%] h-auto">
+                    <p class="text-serif text-[20px] mx-[10px] py-[20px] text-[#da4310] font-bold">Tsunoda labels collision with Gasly ‘a great shame’ after Red Bull racer misses out on vital learning in Saudi Arabian GP</p>
+                </div>
+                </div>
+                <div class="w-[100%] md:w-[45%] flex flex-col items-center justify-center bg-white rounded-[20px]">
+                <img src="Images/GettyImages-2211026175.avif" alt="" class="w-[100%] max-w-full object-cover rounded-t-[20px]">
+                <div class="flex flex-col w-[100%] h-auto">
+                    <p class="text-serif text-[20px] mx-[10px] py-[20px] text-[#da4310] font-bold">Gasly explains ‘unfortunate’ Lap 1 clash with Tsunoda in Jeddah as chance for Alpine to score ‘good points’ goes begging
+                    </p>
+                </div>
+                </div>
+                <div class="w-[100%] md:w-[45%] flex flex-col items-center justify-center bg-white rounded-[20px]">
+                <img src="Images/sainz-albon-saudi-comp.avif" alt="" class="w-[100%] max-w-full object-cover rounded-t-[20px]">
+                <div class="flex flex-col w-[100%] h-auto">
+                    <p class="text-serif text-[20px] mx-[10px] py-[20px] text-[#da4310] font-bold">Albon and Sainz praise teamwork as Saudi Arabia double points finish puts Williams fifth in standings
+                    </p>
+                </div>
+                </div>
+            </section>
+
+            <section class="my-[25px] container mx-auto md:w-[40%]">
+                <p class="text-4xl font-bold text-[#da4310] mx-[5%]">Mundial de Constructores</p>
+                <div class="w-[90%] mx-auto my-[20px] bg-white rounded-[20px] p-[20px] truncate">
+                <table class="w-full">
+                    <thead>
+                    <tr class="border-b-[1px] border-[#da4310]">
+                        <th class="text-left pb-[10px] mb-[10px]">Equipo</th>
+                        <th class="text-right pb-[10px] mb-[10px]">Puntos</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1 McLaren Mercedes</td>
+                        <td class="text-right">188 pts</td>
+                    </tr>
+                    <tr class="h-[3px] bg-gray-300"></tr>
+                    <tr>
+                        <td>2 Mercedes</td>
+                        <td class="text-right">111 pts</td>
+                    </tr>
+                    <tr class="h-[3px] bg-gray-300"></tr>
+                    <tr>
+                        <td>3 Red Bull Racing Honda RBPT</td>
+                        <td class="text-right">89 pts</td>
+                    </tr>
+                    <tr class="h-[3px] bg-gray-300"></tr>
+                    <tr>
+                        <td>4 Ferrari</td>
+                        <td class="text-right">78 pts</td>
+                    </tr>
+                    <tr class="h-[3px] bg-gray-300"></tr>
+                    <tr>
+                        <td>5 Williams Mercedes</td>
+                        <td class="text-right">25 pts</td>
+                    </tr>
+                    <tr class="h-[3px] bg-gray-300"></tr>
+                    <tr>
+                        <td>6 Hass Ferrari</td>
+                        <td class="text-right">20 pts</td>
+                    </tr>
+                    <tr class="h-[3px] bg-gray-300"></tr>
+                    <tr>
+                        <td>7 Aston Martin</td>
+                        <td class="text-right">10 pts</td>
+                    </tr>
+                    <tr class="h-[3px] bg-gray-300"></tr>
+                    <tr>
+                        <td>8 Racing Bulls Honda RBPT</td>
+                        <td class="text-right">8 pts</td>
+                    </tr>
+                    <tr class="h-[3px] bg-gray-300"></tr>
+                    <tr>
+                        <td>9 Alpine Renault</td>
+                        <td class="text-right">6 pts</td>
+                    </tr>
+                    <tr class="h-[3px] bg-gray-300"></tr>
+                    <tr>
+                        <td>10 Kick Sauber Ferrari</td>
+                        <td class="text-right">6 pts</td>
+                    </tr>
+                    </tbody>
+                </table>
+                </div>
+
+                <p class="text-4xl font-bold text-[#da4310] mx-[5%]">Mundial de pilotos</p>
+                <div class="w-[90%] mx-auto my-[20px] bg-white rounded-[20px] p-[20px]">
+                <table class="w-full">
+                    <thead>
+                    <tr class="border-b-[1px] border-[#da4310]">
+                        <th class="text-left pb-[10px] mb-[10px]">Piloto</th>
+                        <th class="text-left pb-[10px] mb-[10px]">Equipo</th>
+                        <th class="text-right pb-[10px] mb-[10px]">Puntos</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="border-b-[1px] border-gray-300">
+                        <td>1 Piastri</td>
+                        <td>McLaren</td>
+                        <td class="text-right">99 pts</td>
+                    </tr>
+                    <tr class="h-[3px] bg-gray-300"></tr>
+                    <tr class="border-b-[1px] border-gray-300">
+                        <td>2 Norris</td>
+                        <td>McLaren</td>
+                        <td class="text-right">89 pts</td>
+                    </tr>
+                    <tr class="h-[3px] bg-gray-300"></tr>
+                    <tr class="border-b-[1px] border-gray-300">
+                        <td>3 Verstappen</td>
+                        <td>Red Bull</td>
+                        <td class="text-right">87 pts</td>
+                    </tr>
+                    <tr class="h-[3px] bg-gray-300"></tr>
+                    <tr class="border-b-[1px] border-gray-300">
+                        <td>4 Russell</td>
+                        <td>Mercedes</td>
+                        <td class="text-right">73 pts</td>
+                    </tr>
+                    <tr class="h-[3px] bg-gray-300"></tr>
+                    <tr class="border-b-[1px] border-gray-300">
+                        <td>5 Leclerc</td>
+                        <td>Ferrari</td>
+                        <td class="text-right">47 pts</td>
+                    </tr>
+                    <tr class="h-[3px] bg-gray-300"></tr>
+                    <tr class="border-b-[1px] border-gray-300">
+                        <td>6 Antonelli</td>
+                        <td>Mercedes</td>
+                        <td class="text-right">38 pts</td>
+                    </tr>
+                    <tr class="h-[3px] bg-gray-300"></tr>
+                    <tr class="border-b-[1px] border-gray-300">
+                        <td>7 Hamilton</td>
+                        <td>Ferrari</td>
+                        <td class="text-right">31 pts</td>
+                    </tr>
+                    <tr class="h-[3px] bg-gray-300"></tr>
+                    <tr class="border-b-[1px] border-gray-300">
+                        <td>8 Albon</td>
+                        <td>Williams</td>
+                        <td class="text-right">20 pts</td>
+                    </tr>
+                    <tr class="h-[3px] bg-gray-300"></tr>
+                    <tr class="border-b-[1px] border-gray-300">
+                        <td>9 Ocon</td>
+                        <td>Haas</td>
+                        <td class="text-right">14 pts</td>
+                    </tr>
+                    <tr class="h-[3px] bg-gray-300"></tr>
+                    <tr class="border-b-[1px] border-gray-300">
+                        <td>10 Stroll</td>
+                        <td>Aston Martin</td>
+                        <td class="text-right">10 pts</td>
+                    </tr>
+                    <tr class="h-[3px] bg-gray-300"></tr>
+                    <tr class="border-b-[1px] border-gray-300">
+                        <td>11 Gasly</td>
+                        <td>Alpine</td>
+                        <td class="text-right">6 pts</td>
+                    </tr>
+                    <tr class="h-[3px] bg-gray-300"></tr>
+                    <tr class="border-b-[1px] border-gray-300">
+                        <td>12 Hulkenberg</td>
+                        <td>Kick Sauber</td>
+                        <td class="text-right">6 pts</td>
+                    </tr>
+                    <tr class="h-[3px] bg-gray-300"></tr>
+                    <tr class="border-b-[1px] border-gray-300">
+                        <td>13 Bearman</td>
+                        <td>Haas</td>
+                        <td class="text-right">6 pts</td>
+                    </tr>
+                    <tr class="h-[3px] bg-gray-300"></tr>
+                    <tr class="border-b-[1px] border-gray-300">
+                        <td>14 Hadjar</td>
+                        <td>Racing Bulls</td>
+                        <td class="text-right">5 pts</td>
+                    </tr>
+                    <tr class="h-[3px] bg-gray-300"></tr>
+                    <tr class="border-b-[1px] border-gray-300">
+                        <td>15 Sainz</td>
+                        <td>Williams</td>
+                        <td class="text-right">5 pts</td>
+                    </tr>
+                    <tr class="h-[3px] bg-gray-300"></tr>
+                    <tr class="border-b-[1px] border-gray-300">
+                        <td>16 Tsunoda</td>
+                        <td>Red Bull</td>
+                        <td class="text-right">5 pts</td>
+                    </tr>
+                    <tr class="h-[3px] bg-gray-300"></tr>
+                    <tr class="border-b-[1px] border-gray-300">
+                        <td>17 Alonso</td>
+                        <td>Aston Martin</td>
+                        <td class="text-right">0 pts</td>
+                    </tr>
+                    <tr class="h-[3px] bg-gray-300"></tr>
+                    <tr class="border-b-[1px] border-gray-300">
+                        <td>18 Lawson</td>
+                        <td>Racing Bulls</td>
+                        <td class="text-right">0 pts</td>
+                    </tr>
+                    <tr class="h-[3px] bg-gray-300"></tr>
+                    <tr class="border-b-[1px] border-gray-300">
+                        <td>19 Doohan</td>
+                        <td>Alpine</td>
+                        <td class="text-right">0 pts</td>
+                    </tr>
+                    <tr class="h-[3px] bg-gray-300"></tr>
+                    <tr class="border-b-[1px] border-gray-300">
+                        <td>20 Bortoleto</td>
+                        <td>Kick Sauber</td>
+                        <td class="text-right">0 pts</td>
+                    </tr>
+                    </tbody>
+                </table>
+                </div>
+            </section>
+        </section>
+
+        <section class="w-[90%] bg-white h-[auto] my-[25px] mx-auto rounded-[20px] container">
+            <p class="font-bold text-[20px] text-[#da4310] mx-[10px] py-[20px]">Clothing Store</p>
+            <div class="overflow-x-auto">
+            <ul class="inline-flex items-center gap-[5px]">
+                <li class="flex-shrink-0"><img src="Images/Ferrari polo.jpg" alt="" class="w-[400px] h-auto object-cover rounded-md">
+                <p class="text-center text-2xl font-bold">Ferrari</p></li>
+                <li class="flex-shrink-0"><img src="Images/Mercedes polo.avif" alt="" class="w-[400px] h-auto object-cover rounded-md">
+                <p class="text-center text-2xl font-bold">Mercedes</p></li>
+                <li class="flex-shrink-0"><img src="images/Mclaren polo.webp" alt="" class="w-[400px] h-auto object-cover rounded-md">
+                <p class="text-center text-2xl font-bold">McLaren</p></li>
+                <li class="flex-shrink-0"><img src="Images/redbull polo.avif" alt="" class="w-[400px] h-auto object-cover rounded-md">
+                <p class="text-center text-2xl font-bold">Red Bull</p></li>
+                <li class="flex-shrink-0"><img src="images/33.avif" alt="" class="w-[400px] h-auto object-cover rounded-md">
+                <p class="text-center text-2xl font-bold">Aston Martin</p></li>
+            </ul>
+            </div>
+        </section>
+
+        <section class="h-[auto] w-[90%] my-[25px] mx-auto">
+            <div class="text-[#da4310] font-bold mb-[25px]">
+                <p class="mb-[20px] text-4xl">Reclutamiento</p>
+                <p class="text-2xl">Preguntas frecuentes para postularse para piloto de la academia</p>
+            </div>
+            <div class="w-[100%] flex gap-[20px] justify-between rounded-[20px] text-[#da4310] text-2xl overflow-x-auto py-[20px] ">
+                <div class="flex flex-col items-center ">
+                    <img src="./Icons/money-check-dollar-solid.svg" alt="" class="w-[90px]">
+                    <p class="mt-[10px]">Inversion</p>
+                </div>
+                <div class="flex flex-col items-center ">
+                    <img src="./Icons/calendar-days-solid.svg" alt="" class="w-[90px]">
+                    <p class="mt-[10px]">Horarios</p>
+                </div>
+                <div class="flex flex-col items-center ">
+                    <img src="./Icons/earth-americas-solid.svg" alt="" class="w-[90px]">
+                    <p class="mt-[10px]">Ubicacion y GPs</p>
+                </div>
+                <div class="flex flex-col items-center ">
+                    <img src="./Icons/sheet-plastic-solid.svg" alt="" class="w-[90px]">
+                    <p class="mt-[10px]">RFormularios</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-black/70 h-auto w-[100%] flex flex-col sm:flex-row items-center text-center sm:text-start sm:justify-between text-white py-[20px] overflow-hidden">
+        <div class="flex flex-col items-center justify-center gap-[10px] px-[20px]">
+            <p class="font-bold">Conocenos</p>
+            <ul>
+                <li>Trabajo</li>
+                <li>Relaciones con los invercionistas</li>
+                <li>Años de trayectoria</li>
+                <li>Blog</li>
+            </ul>
+        </div>
+        <div class="flex flex-col items-center justify-center gap-[10px] px-[20px]">
+            <p class="font-bold">Comunidad</p>
+            <ul>
+                <li>Discord</li>
+                <li>Instagram</li>
+                <li>Twitter</li>
+                <li>Facebook</li>
+            </ul>
+        </div>
+        <div class="flex flex-col items-center justify-center gap-[10px] px-[20px]">
+            <p class="font-bold">Legal</p>
+            <ul>
+                <li>Terminos y condiciones</li>
+                <li>Politicas de privacidad</li>
+                <li>Politicas de cookies</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

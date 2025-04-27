@@ -7,20 +7,20 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-    <header class="bg-[#121215] h-[10vh] w-[100%] flex items-center justify-evenly px-[10px] overflow-hidden min-w-full gap-[10%]">
+    <header class="bg-[#121215] h-[10vh] w-[90%] flex mx-auto items-center justify-evenly px-[10px] overflow-hidden min-w-full gap-[10%]">
         <div class="flex items-center w-[30%]">
-            <img src="./Icons/logo.png!w700wp" alt="" class="w-[70px] hidden md:flex justify-center items-center">
-            <p class="text-[#da4310] text-[20px] font-bold hidden md:flex">RacingWorld</p>
+            <img src="./Icons/logo.png!w700wp" alt="" class="w-[70px] hidden md:flex justify-center items-center cursor-pointer">
+            <p class="text-[#da4310] text-[20px] font-bold hidden md:flex cursor-pointer">RacingWorld</p>
             <label for="menu">
-                <img src="./Icons/menu.svg" alt="" class="w-[20px] md:hidden">
+                <img src="./Icons/menu.svg" alt="" class="w-[20px] md:hidden cursor-pointer">
             </label>
         </div>
         <div class="w-[80%] md:mr-[15%] flex items-center justify-center a">
-            <select name="Equipos" id="" class="border-[1px] rounded-[20px] bg-white/80 h-[40px] hidden md:flex r-[5px] w-[15%] truncate">
+            <select name="Equipos" id="" class="border-[1px] rounded-[20px] bg-white/80 h-[40px] hidden md:flex r-[5px] w-[15%] truncate cursor-pointer">
                 <option value="">Alpine</option>
                 <option value="">Aston Martin</option>
                 <option value="">Ferrari</option>
-                <option value="Haas">Haas</option>
+                <option value="">Haas</option>
                 <option value="">Kick Sauber</option>
                 <option value="">McLaren</option>
                 <option value="">Mercedes</option>
@@ -28,70 +28,104 @@
                 <option value="">Red Bull</option>
                 <option value="">Williams</option>
             </select>
-            <input type="text" placeholder="Buscar piloto o equipo" class="border-[1px] rounded-[20px] h-[40px] w-[60%] border-white bg-white/80" >
+            <input type="text" placeholder=" Buscar piloto o equipo" class="border-[1px] rounded-[20px] h-[40px] w-[60%] border-white bg-white/80 pl-[2%]" >
         </div>
-        <div class="flex items-center gap-2">
+        <div class="flex items-center gap-2 translate-x-[-80%] cursor-pointer">
             <img src="./Icons/bell.svg" alt="" class="w-[30px] mt-[10px]">
             <img src="./Icons/user.svg" alt="" class="w-[30px] mt-[10px]">
             <img src="./Icons/cart-shopping-solid.svg" alt="" class="w-[30px] mt-[10px]">
         </div>
     </header>
     <header class="bg-[#121215] h-auto w-[100%] items-center py-[10px] hidden sm:flex md:justify-center hidden md:flex md:flex-wrap ">
-        <ul class="flex gap-[5%] items-center text-[#da4310] font-bold">
+        <ul class="flex gap-[5%] items-center text-[#da4310] font-bold cursor-pointer">
+            <li><a href="#News">Noticias</a></li>
+            <li> <a href="#Mundial">Mundial</a></li>
+            <li> <a href="#Cronicas">Cronicas</a></li>
+            <li> <a href="#Shopping">Shopping</a></li>
+            <li> <a href="#Reclutamiento">Reclutamiento</a></li>
+        </ul>
+    </header>
+
+    <input type="checkbox" id="menu" class="hidden peer/menu">
+    <label for="menu" class="h-full w-full peer-checked/menu:bg-[rgba(0,0,0,0.5)] fixed top-0 left-0 hidden peer-checked/menu:block"></label>
+    <aside class="bg-[#121215] h-full fixed w-[60%] top-0 left-0 translate-x-[-100%] peer-checked/menu:translate-x-0 transition-transform duration-300 ease-in-out md:hidden justify-between">
+        <label for="menu"><p class="text-[#da4310] ml-[80%] translate-y-[150%] text-[25px] cursor-pointer">X</p></label>
+        <ul class="h-full flex flex-col gap-[5%] items-start text-[#da4310] font-bold p-[20px] top-0">
             <li>Noticias</li>
             <li>Mundial</li>
             <li>Cronicas</li>
             <li>Shopping</li>
             <li>Recutamienmto</li>
         </ul>
-    </header>
-
-    <input type="checkbox" id="menu" class="hidden peer/menu">
-    <label for="menu" class="h-full w-full peer-checked/menu:bg-[rgba(0,0,0,0.5)] fixed top-0 left-0 hidden peer-checked/menu:block"></label>
-    <aside class="bg-[#121215] h-full fixed w-[60%] top-0 left-0 translate-x-[-100%] peer-checked/menu:translate-x-0 transition-transform duration-300 ease-in-out md:hidden">
-        <ul class="h-full flex flex-col gap-[5%] items-start text-[#da4310] font-bold p-[20px] top-0">
-            <li>Noticias <label for="menu"><p class="text-white flex justify-end mr-[10%]">X</p></label></li>
-            <li>Mundial</li>
-            <li>Cronicas</li>
-            <li>Shopping</li>
-            <li>Recutamienmto</li>
-        </ul>
     </aside>
-
     <main class="mx-auto py-[1%] h-auto bg-black/90">
-        <section class="md:flex md:grid-cols-2 md:gap-[10px] lg:gap-[5px]">
-            <p class="text-serif text-[20px] mx-[10px] lg:mx-[5px] lg:py-[10px] text-[#da4310] font-bold">News</p>
-            <section class="container w-[90%] flex flex-col md:flex-row md:flex-wrap lg:gap-[5px] gap-[10px] mx-auto items-center justify-center md:w-[70%] max-w-[1200px]">
-                <div class="w-[100%] md:w-[45%] flex flex-col items-center justify-center bg-white rounded-[20px]">
-                <img src="Images/haas-saudi-comp.avif" alt="" class="w-[100%] max-w-full object-cover rounded-t-[20px]">
-                <div class="flex flex-col w-[100%] h-auto ">
-                    <p class="text-serif text-[20px] mx-[10px] py-[20px] text-[#da4310] font-bold">Ocon admits Haas struggled with ‘quite a few things’ in Saudi Arabia while Bearman takes positives from first triple header</p>
-                </div>
-                </div>
-                <div class="w-[100%] md:w-[45%] flex flex-col items-center justify-center bg-white rounded-[20px]">
-                <img src="Images/GettyImages-2211028424.avif" alt="" class="w-[100%] max-w-full object-cover rounded-t-[20px]">
-                <div class="flex flex-col w-[100%] h-auto">
-                    <p class="text-serif text-[20px] mx-[10px] py-[20px] text-[#da4310] font-bold">Tsunoda labels collision with Gasly ‘a great shame’ after Red Bull racer misses out on vital learning in Saudi Arabian GP</p>
-                </div>
-                </div>
-                <div class="w-[100%] md:w-[45%] flex flex-col items-center justify-center bg-white rounded-[20px]">
-                <img src="Images/GettyImages-2211026175.avif" alt="" class="w-[100%] max-w-full object-cover rounded-t-[20px]">
-                <div class="flex flex-col w-[100%] h-auto">
-                    <p class="text-serif text-[20px] mx-[10px] py-[20px] text-[#da4310] font-bold">Gasly explains ‘unfortunate’ Lap 1 clash with Tsunoda in Jeddah as chance for Alpine to score ‘good points’ goes begging
-                    </p>
-                </div>
-                </div>
-                <div class="w-[100%] md:w-[45%] flex flex-col items-center justify-center bg-white rounded-[20px]">
-                <img src="Images/sainz-albon-saudi-comp.avif" alt="" class="w-[100%] max-w-full object-cover rounded-t-[20px]">
-                <div class="flex flex-col w-[100%] h-auto">
-                    <p class="text-serif text-[20px] mx-[10px] py-[20px] text-[#da4310] font-bold">Albon and Sainz praise teamwork as Saudi Arabia double points finish puts Williams fifth in standings
-                    </p>
-                </div>
+        <div class="flex items-center ml-[2%] ">
+            <p class="text-serif text-[20px] mx-[10px] lg:mx-[5px] lg:py-[10px] text-[#da4310] font-bold" id="News">News</p>
+            <select name="Filtrar" id="" class="border-[1px] rounded-[10px] bg-[#da4310] h-[40px] w-[5%] lg:mx-[5px] lg:py-[10px] mx-[10px] text-white">
+                <option value="Hoy">Hoy</option>
+                <option value="Ayer">Ayer</option>
+                <option value="Esta semana">Esta semana</option>
+                <option value="Semana pasada">Semana pasada</option>
+            </select>
+        </div>
+        <section class="w-[100%] mx-auto flex flex-col md:flex md:flex-row md:gap-[0%] lg:gap-[0%] items-start justify-center">
+            <section class="w-full mx-auto px-4 md:px-6 lg:px-8 mt-[10px]">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-auto">
+                    <div class="flex flex-col bg-white rounded-[20px] overflow-hidden cursor-pointer hover:transition-transform hover:scale-105 duration-300">
+                        <img src="./Images/haas-saudi-comp.avif" alt="Haas en Arabia Saudita" class="w-full object-cover">
+                        <div class="p-5">
+                            <p class="text-serif text-lg md:text-xl text-[#da4310] font-bold">
+                                Ocon admits Haas struggled with 'quite a few things' in Saudi Arabia while Bearman takes positives from first triple header
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col bg-white rounded-[20px] overflow-hidden cursor-pointer hover:transition-transform hover:scale-105 duration-300">
+                        <img src="./Images/GettyImages-2211028424.avif" alt="Tsunoda y Gasly" class="w-full object-cover">
+                        <div class="p-5">
+                            <p class="text-serif text-lg md:text-xl text-[#da4310] font-bold">
+                                Tsunoda labels collision with Gasly 'a great shame' after Red Bull racer misses out on vital learning in Saudi Arabian GP
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col bg-white rounded-[20px] overflow-hidden cursor-pointer hover:transition-transform hover:scale-105 duration-300">
+                        <img src="./Images/GettyImages-2211026175.avif" alt="Gasly explica incidente" class="w-full object-cover">
+                        <div class="p-5">
+                            <p class="text-serif text-lg md:text-xl text-[#da4310] font-bold">
+                                Gasly explains 'unfortunate' Lap 1 clash with Tsunoda in Jeddah as chance for Alpine to score 'good points' goes begging
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col bg-white rounded-[20px] overflow-hidden cursor-pointer hover:transition-transform hover:scale-105 duration-300">
+                        <img src="./Images/sainz-albon-saudi-comp.avif" alt="Sainz y Albon" class="w-full object-cover">
+                        <div class="p-5">
+                            <p class="text-serif text-lg md:text-xl text-[#da4310] font-bold">
+                                Albon and Sainz praise teamwork as Saudi Arabia double points finish puts Williams fifth in standings
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col bg-white rounded-[20px] overflow-hidden cursor-pointer hover:transition-transform hover:scale-105 duration-300">
+                        <img src="./Images/Vasseur Hamilton header image Saudi.avif" alt="Tsunoda y Gasly" class="w-full object-cover">
+                        <div class="p-5">
+                            <p class="text-serif text-lg md:text-xl text-[#da4310] font-bold">
+                                ‘I’m 2000% behind him’ – Vasseur backs Hamilton amid early Ferrari struggles as he insists ‘potential is there’
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col bg-white rounded-[20px] overflow-hidden cursor-pointer hover:transition-transform hover:scale-105 duration-300">
+                        <img src="./Images/Verstappen Piastri header image Saudi.avif" alt="Tsunoda y Gasly" class="w-full object-cover">
+                        <div class="p-5">
+                            <p class="text-serif text-lg md:text-xl text-[#da4310] font-bold">
+                                'That's what you need to fight for a championship' – Verstappen reveals key Piastri trait that could help him in title battle
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            <section class="my-[25px] container mx-auto md:w-[40%]">
-                <p class="text-4xl font-bold text-[#da4310] mx-[5%]">Mundial de Constructores</p>
+            <section class="my-[25px] container mx-auto md:w-[80%] flex flex-col mt-[1%]">
+                <p class="text-4xl font-bold text-[#da4310] mx-[5%]" id="Mundial">Mundial de Constructores</p>
                 <div class="w-[90%] mx-auto my-[20px] bg-white rounded-[20px] p-[20px] truncate">
                 <table class="w-full">
                     <thead>
@@ -170,7 +204,6 @@
                         <td>McLaren</td>
                         <td class="text-right">99 pts</td>
                     </tr>
-                    <tr class="h-[3px] bg-gray-300"></tr>
                     <tr class="border-b-[1px] border-gray-300">
                         <td>2 Norris</td>
                         <td>McLaren</td>
@@ -290,19 +323,19 @@
             </section>
         </section>
 
-        <section class="w-[90%] bg-white h-[auto] my-[25px] mx-auto rounded-[20px] container">
-            <p class="font-bold text-[20px] text-[#da4310] mx-[10px] py-[20px]">Clothing Store</p>
+        <section class="w-[100%] bg-white h-[auto] my-[25px] mx-auto rounded-[20px] container">
+            <p class="font-bold text-[20px] text-[#da4310] mx-[10px] py-[20px]" id="Shopping">Clothing Store</p>
             <div class="overflow-x-auto">
-            <ul class="inline-flex items-center gap-[5px]">
-                <li class="flex-shrink-0"><img src="Images/Ferrari polo.jpg" alt="" class="w-[400px] h-auto object-cover rounded-md">
+            <ul class="inline-flex items-center gap-[5px] cursor-pointer">
+                <li class="flex-shrink-0 hover:transition-transform hover:scale-105 duration-300"><img src="Images/Ferrari polo.jpg" alt="" class="w-[400px] h-auto object-cover rounded-md">
                 <p class="text-center text-2xl font-bold">Ferrari</p></li>
-                <li class="flex-shrink-0"><img src="Images/Mercedes polo.avif" alt="" class="w-[400px] h-auto object-cover rounded-md">
+                <li class="flex-shrink-0 hover:transition-transform hover:scale-105 duration-300"><img src="Images/Mercedes polo.avif" alt="" class="w-[400px] h-auto object-cover rounded-md">
                 <p class="text-center text-2xl font-bold">Mercedes</p></li>
-                <li class="flex-shrink-0"><img src="images/Mclaren polo.webp" alt="" class="w-[400px] h-auto object-cover rounded-md">
+                <li class="flex-shrink-0 hover:transition-transform hover:scale-105 duration-300"><img src="images/Mclaren polo.webp" alt="" class="w-[400px] h-auto object-cover rounded-md">
                 <p class="text-center text-2xl font-bold">McLaren</p></li>
-                <li class="flex-shrink-0"><img src="Images/redbull polo.avif" alt="" class="w-[400px] h-auto object-cover rounded-md">
+                <li class="flex-shrink-0 hover:transition-transform hover:scale-105 duration-300"><img src="Images/redbull polo.avif" alt="" class="w-[400px] h-auto object-cover rounded-md">
                 <p class="text-center text-2xl font-bold">Red Bull</p></li>
-                <li class="flex-shrink-0"><img src="images/33.avif" alt="" class="w-[400px] h-auto object-cover rounded-md">
+                <li class="flex-shrink-0 hover:transition-transform hover:scale-105 duration-300"><img src="images/33.avif" alt="" class="w-[400px] h-auto object-cover rounded-md">
                 <p class="text-center text-2xl font-bold">Aston Martin</p></li>
             </ul>
             </div>
@@ -310,23 +343,23 @@
 
         <section class="h-[auto] w-[90%] my-[25px] mx-auto">
             <div class="text-[#da4310] font-bold mb-[25px]">
-                <p class="mb-[20px] text-4xl">Reclutamiento</p>
+                <p class="mb-[20px] text-4xl" id="Reclutamiento">Reclutamiento</p>
                 <p class="text-2xl">Preguntas frecuentes para postularse para piloto de la academia</p>
             </div>
-            <div class="w-[100%] flex gap-[20px] justify-between rounded-[20px] text-[#da4310] text-2xl overflow-x-auto py-[20px] ">
-                <div class="flex flex-col items-center ">
+            <div class="w-[100%] flex gap-[20px] justify-between rounded-[20px] text-[#da4310] text-2xl overflow-x-auto py-[20px]">
+                <div class="flex flex-col items-center cursor-pointer hover:transition-transform hover:scale-105 duration-300">
                     <img src="./Icons/money-check-dollar-solid.svg" alt="" class="w-[90px]">
                     <p class="mt-[10px]">Inversion</p>
                 </div>
-                <div class="flex flex-col items-center ">
+                <div class="flex flex-col items-center cursor-pointer hover:transition-transform hover:scale-105 duration-300">
                     <img src="./Icons/calendar-days-solid.svg" alt="" class="w-[90px]">
                     <p class="mt-[10px]">Horarios</p>
                 </div>
-                <div class="flex flex-col items-center ">
+                <div class="flex flex-col items-center cursor-pointer hover:transition-transform hover:scale-105 duration-300">
                     <img src="./Icons/earth-americas-solid.svg" alt="" class="w-[90px]">
                     <p class="mt-[10px]">Ubicacion y GPs</p>
                 </div>
-                <div class="flex flex-col items-center ">
+                <div class="flex flex-col items-center cursor-pointer hover:transition-transform hover:scale-105 duration-300">
                     <img src="./Icons/sheet-plastic-solid.svg" alt="" class="w-[90px]">
                     <p class="mt-[10px]">RFormularios</p>
                 </div>

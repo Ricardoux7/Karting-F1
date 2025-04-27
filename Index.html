@@ -7,6 +7,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
+    <!--Heander-->>
     <header class="bg-[#121215] h-[10vh] w-[90%] flex mx-auto items-center justify-evenly px-[10px] overflow-hidden min-w-full gap-[10%]">
         <div class="flex items-center w-[30%]">
             <img src="./Icons/logo.png!w700wp" alt="" class="w-[70px] hidden md:flex justify-center items-center cursor-pointer">
@@ -45,7 +46,7 @@
             <li> <a href="#Reclutamiento">Reclutamiento</a></li>
         </ul>
     </header>
-
+    <!--Barra Lateral-->
     <input type="checkbox" id="menu" class="hidden peer/menu">
     <label for="menu" class="h-full w-full peer-checked/menu:bg-[rgba(0,0,0,0.5)] fixed top-0 left-0 hidden peer-checked/menu:block"></label>
     <aside class="bg-[#121215] h-full fixed w-[60%] top-0 left-0 translate-x-[-100%] peer-checked/menu:translate-x-0 transition-transform duration-300 ease-in-out md:hidden justify-between">
@@ -58,6 +59,7 @@
             <li>Recutamienmto</li>
         </ul>
     </aside>
+    <!--Contenido-->
     <main class="mx-auto py-[1%] h-auto bg-black/90">
         <div class="flex items-center ml-[2%] ">
             <p class="text-serif text-[20px] mx-[10px] lg:mx-[5px] lg:py-[10px] text-[#da4310] font-bold" id="News">News</p>
@@ -322,7 +324,7 @@
                 </div>
             </section>
         </section>
-
+        <!--tienda de ropa-->
         <section class="w-[100%] bg-white h-[auto] my-[25px] mx-auto rounded-[20px] container">
             <p class="font-bold text-[20px] text-[#da4310] mx-[10px] py-[20px]" id="Shopping">Clothing Store</p>
             <div class="overflow-x-auto">
@@ -340,7 +342,7 @@
             </ul>
             </div>
         </section>
-
+        <!--Informacion-->
         <section class="h-[auto] w-[90%] my-[25px] mx-auto">
             <div class="text-[#da4310] font-bold mb-[25px]">
                 <p class="mb-[20px] text-4xl" id="Reclutamiento">Reclutamiento</p>
@@ -366,7 +368,7 @@
             </div>
         </section>
     </main>
-
+    <!--Pie de Pagina-->
     <footer class="bg-black/70 h-auto w-[100%] flex flex-col sm:flex-row items-center text-center sm:text-start sm:justify-between text-white py-[20px] overflow-hidden">
         <div class="flex flex-col items-center justify-center gap-[10px] px-[20px]">
             <p class="font-bold">Conocenos</p>
